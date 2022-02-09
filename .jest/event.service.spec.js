@@ -42149,7 +42149,7 @@ If '${name}' is a directive input, make sure the directive is imported by the cu
   var EventService = class {
     constructor(http) {
       this.http = http;
-      this.eventsUrl = "https://nettuts.hu/jms/feladat/events";
+      this.eventsUrl = "http://localhost:3000/events";
     }
     getAll() {
       return this.http.get(this.eventsUrl);
@@ -42161,7 +42161,7 @@ If '${name}' is a directive input, make sure the directive is imported by the cu
       return this.http.patch(`${this.eventsUrl}/${event.id}`, event);
     }
     create(event) {
-      return this.http.post(this.eventsUrl, event);
+      return this.http.post(`${this.eventsUrl}`, event);
     }
     remove(id) {
       return this.http.delete(`${this.eventsUrl}/${id}`);
