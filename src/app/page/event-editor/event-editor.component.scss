@@ -1,0 +1,15 @@
+.error-message {
+  animation: appear 1s ease-in;
+  background-color: rgb(255, 96, 96);
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

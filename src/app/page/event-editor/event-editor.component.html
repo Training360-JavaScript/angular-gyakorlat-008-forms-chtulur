@@ -11,7 +11,10 @@
           pattern=".{8,25}"
           required
         />
-        <div [hidden]="eventForm.controls.name?.valid" class="error-message">
+        <div
+          [hidden]="eventForm.controls.name?.valid"
+          class="error-message mt-2"
+        >
           The character length should be between 8-25. (example: Father's day)
         </div>
       </div>
@@ -25,11 +28,13 @@
           required
           pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"
         />
-        <div [hidden]="eventForm.controls.date?.valid" class="error-message">
+        <div
+          [hidden]="eventForm.controls.date?.valid"
+          class="error-message mt-2"
+        >
           Invalid date format. (DD/MM/YYYY)(example: 02/05/1991)
         </div>
       </div>
-
       <div class="form-group">
         <label for="">Time</label>
         <input
@@ -40,9 +45,13 @@
           required
           pattern="^[0-2][0-3]:[0-5][0-9]( ?)([AaPp][Mm])$"
         />
-      </div>
-      <div [hidden]="eventForm.controls.time?.valid" class="error-message">
-        Invalid time format. Include AM or PM (example: 11:00 AM)
+
+        <div
+          [hidden]="eventForm.controls.time?.valid"
+          class="error-message mt-2"
+        >
+          Invalid time format. Include AM or PM (example: 11:00 AM)
+        </div>
       </div>
       <div class="form-group">
         <label for="">Location</label>
@@ -54,10 +63,14 @@
           required
           pattern="^[A-Z].{5,25}"
         />
-      </div>
-      <div [hidden]="eventForm.controls.location?.valid" class="error-message">
-        Invalid location format. Start with an uppercase letter. Provide from 5
-        to 25 characters (example: Dawn Road).
+
+        <div
+          [hidden]="eventForm.controls.location?.valid"
+          class="error-message mt-2"
+        >
+          Invalid location format. Start with an uppercase letter. Provide from
+          5 to 25 characters (example: Dawn Road).
+        </div>
       </div>
 
       <button
